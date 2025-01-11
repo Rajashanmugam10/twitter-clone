@@ -1,8 +1,12 @@
 import React from "react";
+import { Post } from "../Components/Post";
+import agatha from "../assets/agatha.jpg";
+import { Header } from "../Components/Header";
 export const Home: React.FC = () => {
   return (
     <div>
-      <p>testing the code editor</p>
+      <Header name="Home" />
+      <Post image={agatha} name="agatha harkness" profileimage={agatha} />
     </div>
   );
 };
