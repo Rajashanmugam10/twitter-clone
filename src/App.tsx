@@ -1,4 +1,5 @@
+import { Home } from "./Pages/Home";
 const App: React.FC = () => {
-  return <p className="text-xl text-red-500">testing app</p>;
+  return <Home />;
 };
 export default App;
