@@ -7,6 +7,8 @@ export const Home: React.FC = () => {
     <div>
       <Header name="Home" />
       <Post image={agatha} name="agatha harkness" profileimage={agatha} />
+      <Post image={agatha} name="agatha harkness" profileimage={agatha} />
+      <Post image={agatha} name="agatha harkness" profileimage={agatha} />
     </div>
   );
 };

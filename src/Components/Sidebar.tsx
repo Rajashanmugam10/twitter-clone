@@ -4,23 +4,25 @@ import { CgProfile, CgTrending } from "react-icons/cg";
 
 export const Sidebar: React.FC = () => {
   return (
-    <div className="flex  items-center mt-[10px] justify-around lg:h-1/2 mt-[50pxflex-row bottom-0 fixed w-full h-[50px]  md:flex-col md:relative md:h-screen ">
-      <Titles icon=<BiHome size="40" /> title="home" navigateurl="/" />
+    <div className="fixed bottom-0 w-full justify-around md:justify-start md:ml-8 md:relative md:h-screen flex h-[50px] md:flex-col col-span-2 shadow-md">
+      <div className="size-10 my-8 rounded-full bg-blue-500 md:block hidden"></div>
+      <Titles icon=<BiHome size="26" /> title="home" navigateurl="/" />
       <Titles
-        icon=<CgTrending size="40" />
-        title="trending"
+        icon=<CgTrending size="26" />
+        title="explore"
         navigateurl="/explore"
       />
       <Titles
-        icon=<BiBell size="40" />
+        icon=<BiBell size="26" />
         title="updates"
         navigateurl="/updates"
       />
       <Titles
-        icon=<CgProfile size="40" />
+        icon=<CgProfile size="26" />
         title="profile"
         navigateurl="/profile"
       />
+      <button className="btn btn-primary rounded-lg">new post</button>
     </div>
   );
 };

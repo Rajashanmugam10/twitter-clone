@@ -10,11 +10,11 @@ export const Titles: React.FC<Titleprops> = ({ title, icon, navigateurl }) => {
   const navigate = useNavigate();
   return (
     <div
-      className="flex items-center space-x-2 mb-10 cursor-pointer"
+      className="flex items-center space-x-2 mb-8 cursor-pointer w-[70%]"
       onClick={() => navigate(navigateurl)}
     >
       {icon}
-      {/* <p className="hidden lg:block lg:text-xl font-bold">{title}</p> */}
+      <p className="hidden lg:block lg:text-xl font-bold">{title}</p>
     </div>
   );
 };

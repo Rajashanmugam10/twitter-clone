@@ -1,36 +1,35 @@
-import { BiUpvote } from "react-icons/bi";
-import { CgComment } from "react-icons/cg";
+import { FaHeart } from "react-icons/fa";
+import { FaComment } from "react-icons/fa6";
 
-interface Postcard {
-  image: string;
-  name: string;
-  profileimage: string;
-}
-export const Post: React.FC<Postcard> = ({ image, profileimage, name }) => {
+export const Post: React.FC = () => {
   return (
-    <div className="flex flex-col m-2">
-      <div className=" flex flex-row space-x-3 items-center">
-        <img
-          src={profileimage}
-          alt=""
-          className="size-10 rounded-full object-cover"
-        />
-        <p className="text-xl font-bold">{name}</p>
-        <button className="btn btn-sm"> following </button>
+    <div className="p-4 w-full mx-auto  rounded-lg text-white">
+      <div className="flex items-center gap-2 mb-2">
+        <div className="w-10 h-10 rounded-full bg-blue-500"></div>
+        <p className="font-bold">username</p>
+        <button className="btn btn-sm bg-blue-500 text-white">follow</button>
+        <p className="text-gray-200 self-end">time</p>
       </div>
-      <img src={image} alt="" className="max-h-90" />
-      <p className="font-bold">
-        testing twitter clone by agatha harkness in fedora xfce with zed code
-        editor along with transpatent visual
+      <p className="mb-4">
+        Agatha Harkness is developing this Twitter clone. She likes purple
+        magic. She hates death and loving her child. Agatha All Along... round
+        round round the road, round in the road.
       </p>
-      <p className="text-blue-500 py-2">
-        hashtags #agatha #agathaallalong #kathryharn
-      </p>
-      <div className="m-2 flex items-center gap-8">
-        <CgComment size={30} color="white" />
-        <BiUpvote size={30} color="white" />
+
+      <img
+        className="w-full max-w-md mx-auto object-cover rounded-md"
+        src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:phgqsmt3stcebxg5tjewe6hr/bafkreiaf5jm64yju3o3gvnlz2sk6icpiopapff3xvpbvurdv3ir2k7cvau@jpeg"
+        alt="Post"
+      />
+      <div className="flex flex-row items-center gap-6 mt-2">
+        <div className="flex items-center gap-2">
+          <FaComment /> 12
+        </div>
+        <div className="flex items-center gap-2">
+          <FaHeart /> 10
+        </div>
       </div>
-      <hr />
+      <hr className="my-2" />
     </div>
   );
 };

@@ -1,21 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "../Components/Sidebar";
+import { Search } from "./Search";
 
 export const Landing: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-12 h-screen bg-black">
-      <div className=" md:col-span-1  h-full">
-        <Sidebar />
-      </div>
-
-      <div className="col-span-12 md:col-span-11 lg:col-span-8 bg- h-screen overflow-y-auto mb-[60px] md:mb-0">
+    <div className="grid grid-cols-10 max-w-6xl mx-auto h-screen bg-black ">
+      <Sidebar />
+      <div className="col-span-10 md:col-span-6 mb-[50px] md:mb-0 lg:col-span-5   overflow-y-scroll flex">
         <Outlet />
       </div>
-
-      <div className="hidden col-span-3 lg:block bg-red-500">
-        {" "}
-        sidebar right{" "}
-      </div>
+      <Search />
     </div>
   );
 };
